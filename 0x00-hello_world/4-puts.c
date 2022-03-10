@@ -1,11 +1,23 @@
-#include <stio.h>
+#include <stdio.h>
+
+
+
 /**
- *main - entry point
+
+ * main - Entry point
+
  *
-*Return: 0 after printing the function
+
+ * Return: exactly Programming is like builing a multilingual puzzle using puts
+
  */
-int main(void)
+
+int  main(void)
+
 {
+
 puts("\"Programming is like building a multilingual puzzle");
+
 return (0);
+
 }
