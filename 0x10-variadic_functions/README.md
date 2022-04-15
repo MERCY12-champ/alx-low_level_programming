@@ -1,1 +1,1 @@
-My readme for variadic functions tasks
+My readme for variadic functions task
