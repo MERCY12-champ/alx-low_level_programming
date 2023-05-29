@@ -1,0 +1,27 @@
+# build an executable named school
+# to use Makefile variables later in the Makefile: $()
+
+# define some Makefile variables for the compiler and compiler flags
+CC = gcc
+# define the C source(.c)
+SRC = main.c school.c
+# replacing the suffix .c of all words in the macro SRCS
+# with the .o suffix
+OBJ = $(SRC:.c=.o)
+# the name of the executable
+NAME = school
+# the program to delete files
+RM = rm -f
+# recompile only the updated source files
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+# deletes all Emacs and Vim temporary files along with the executable
+clean:
+	$(RM) *~ $(NAME)
+# deletes the object files
+oclean:
+	$(RM) $(OBJ)
+# deletes all Emacs and Vim temporary files, the executable, and the object files
+fclean: clean oclean
+# forces recompilation of all source files
+re: fclean all
