@@ -1,0 +1,9 @@
+# build an executable named school
+# to use Makefile variables later in the Makefile: $()
+
+# define some Makefile variables for the compiler and compiler flags
+CC = gcc
+# define the C source file
+SRC = main.c school.c
+all: $(SRC)
+	$(CC) $(SRC) -o school
